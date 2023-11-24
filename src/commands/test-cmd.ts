@@ -1,5 +1,4 @@
 import {Args, Command, Flags} from '@oclif/core'
-import {execSync} from 'node:child_process'
 
 export default class TestCmd extends Command {
   static args = {
@@ -18,13 +17,8 @@ export default class TestCmd extends Command {
   }
 
   public async run(): Promise<void> {
-    const {args, flags} = await this.parse(TestCmd)
+    await this.config.runHook('ensure-python-environment', {id: 'test-cmd'})
 
-    const name = flags.name ?? 'world'
-    this.log(`hello doot ${name} from /mnt/c/work/cli-test/oclif/cbx-test-oclif/src/commands/test-cmd.ts`)
-
-    const res = execSync('python -V')
-
-    this.log(res.toString())
+    this.log('Executing command')
   }
 }

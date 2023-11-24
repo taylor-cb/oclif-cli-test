@@ -51,6 +51,9 @@
       "hello": {
         "description": "Say hello to the world and others"
       }
+    },
+    "hooks": {
+      "prerun": "./dist/hooks/prerun/ensure-python-environment"
     }
   },
   "repository": "oclif/cbx-test-oclif",

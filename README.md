@@ -40,6 +40,7 @@ USAGE
 * [`cbx-test-oclif plugins:uninstall PLUGIN...`](#cbx-test-oclif-pluginsuninstall-plugin-1)
 * [`cbx-test-oclif plugins:uninstall PLUGIN...`](#cbx-test-oclif-pluginsuninstall-plugin-2)
 * [`cbx-test-oclif plugins update`](#cbx-test-oclif-plugins-update)
+* [`cbx-test-oclif test-cmd [FILE]`](#cbx-test-oclif-test-cmd-file)
 
 ## `cbx-test-oclif hello PERSON`
 
@@ -368,4 +369,28 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.5/src/commands/plugins/update.ts)_
+
+## `cbx-test-oclif test-cmd [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ cbx-test-oclif test-cmd [FILE] [-f] [-n <value>]
+
+ARGUMENTS
+  FILE  file to read
+
+FLAGS
+  -f, --force
+  -n, --name=<value>  name to print
+
+DESCRIPTION
+  describe the command here
+
+EXAMPLES
+  $ cbx-test-oclif test-cmd
+```
+
+_See code: [src/commands/test-cmd.ts](https://github.com/oclif/cbx-test-oclif/blob/v0.0.0/src/commands/test-cmd.ts)_
 <!-- commandsstop -->
